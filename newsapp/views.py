@@ -8,13 +8,13 @@ def home(request):
     country = request.GET.get('country')
     category = request.GET.get('category')
   
-    
-    if country == 'India' or country == 'india':
-        country = 'in'
-    elif country == 'USA' or country == 'usa' :
-        country = 'us'
-    else:
-        country = 'in' and 'us'
+    if country:
+        if country == 'India' or country == 'india':
+            country = 'in'
+        elif country == 'USA' or country == 'usa' :
+            country = 'us'
+        else:
+            country = 'in' and 'us'
         
 
    
